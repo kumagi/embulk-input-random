@@ -8,7 +8,7 @@ Expected to used to test or benchmark.
 Run this command with your embulk binary.
 
 ```ruby
-java -jar embulk.jar gem install embulk-plugin-input-random
+$ java -jar embulk.jar gem install embulk-plugin-input-random
 ```
 
 ## Usage
@@ -53,25 +53,29 @@ out:
 and just run
 
 ```
-$ java -jar embulk.jar run random.yml
+$ java -jar embulk.jar preview random.yml
 ```
 
 will generate result like
 
 ```
 Random generation started.
-2015-01-29 02:13:15,497 [INFO]: main:org.embulk.exec.LocalExecutor: Running 4 tasks using 8 local threads
-2015-01-29 02:13:15,498 [INFO]: main:org.embulk.exec.LocalExecutor: {done:  0 / 4, running: 0}
-Random generator input thread 2...
 Random generator input thread 0...
-Random generator input thread 1...
-Random generator input thread 3...
-0,FamwnrENyzxADpecnTQP2lClzJPO1acRC1506d3VUf4,3791
-1,aAA6K0T8L6plLrux9dqd2oFLZWBkYyNnZKGstN3sRRA,9942
-2,tgGcwBPxZ-tQgJmTdIJXgiv-MDBvbUKnMMn1KjNixlo,5907
-3,SyxFHOepjo5WbNgukUEZY7CVT5Y6XGeVb8Gdsdq_EI8,6378
-4,5vfOwlw_xLhaYkd5dXCUaC3TsAyzDbD12GHohy2SXsM,6132
-5,-C_6oNt1Z07RKlGKQ8_OVbCCuHbC-LOLFl5HrIE8y9c,7520
++---------+---------------------------------------------+------------+
+| id:long |                                 name:string | score:long |
++---------+---------------------------------------------+------------+
+|       0 | UPPYQ0S1oiKDddasQxOlXPhZ9ys-FtVwH6-DIywnHG8 |        875 |
+|       1 | IT8KHcI48wM_0ygtm8OVSZQSR1xA4g5lntZ9xAQwY5Y |      2,652 |
+|       2 | 6HOLiPz9-srgwV8bgBX0Whd7Dq6HRUPKusZdONRxesw |      8,560 |
+|       3 | r8X3G5iVZsJJEAp5Wqy8LdUte-2wmnz2Zb9gMiiTp-Q |      2,288 |
+|       4 | g7DDPm6J0y6G9FYGcDgsMk-V6Rewz03sLIu3VUfmp5M |      2,065 |
+|       5 | fwNJWwztnraaa9MH01sq1Uhx2iz66djdkeUSw18DFnQ |      9,214 |
+|       6 | EE2WZ3Z7UIFN4U93fgjWYmGqzWEruVBVBaWJXGjfCsQ |      9,972 |
+|       7 | 70WHrnDYAPx5qNtRxcG2HF-Y4yMO1SXigMep0NFtOo8 |      2,988 |
+|       8 | wbbi1qQlC3x0WY8uksUc_b0PvJjN6e6QhTrykMF7BJE |        831 |
+|       9 | zNBjwP_l1Fu7t8b4xIiYz7dfEO0v0BHS5vZd-xqdmCk |      8,596 |
+|      10 | Rj_NNmf4MG0UASImGbmEHPKf_MUOZe97Jyrs5RQA3q4 |      1,129 |
+...
 ```
 
 You can insert arbitrary storage via Embulk!
