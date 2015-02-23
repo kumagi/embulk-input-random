@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 module Embulk
   require 'securerandom'
   class InputRandom < InputPlugin

@@ -1,4 +1,4 @@
-# Embulk::Plugin::Input::Random
+# Embulk::Input::Random
 
 Random data generator for [Embulk](https://github.com/embulk/embulk).
 Expected to used to test or benchmark.
@@ -8,7 +8,7 @@ Expected to used to test or benchmark.
 Run this command with your embulk binary.
 
 ```ruby
-$ java -jar embulk.jar gem install embulk-plugin-input-random
+$ embulk gem install embulk-input-random
 ```
 
 ## Usage
@@ -102,7 +102,7 @@ More and more types will be appended...
 
 ## Contributing
 
-1. Fork it ( https://github.com/kumagi]/embulk-plugin-input-random/fork )
+1. Fork it ( https://github.com/kumagi]/embulk-input-random/fork )
 2. Create your feature branch (`git checkout -b my-cool-feature`)
 3. Commit your changes (`git commit -am 'Add cool feature'`)
 4. Push to the branch (`git push origin my-cool-feature`)
