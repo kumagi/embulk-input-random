@@ -23,7 +23,7 @@ in:
   schema:
     myid: primary_key
     name: string
-    score: integer
+    score: long
 ```
 
 - type: specify this plugin as `random`
@@ -45,7 +45,7 @@ in:
   schema:
     id: primary_key
     name: string
-    score: integer
+    score: long
 out:
   type: stdout
 ```
@@ -83,11 +83,11 @@ You can insert arbitrary storage via Embulk!
 ### Data Type
 
 Now supported types are belows
-- string: 32bytes of ascii code string
-- integer: random integer 0 to 10000
 - primary_key: increasing number for each rows
-- float: random floating point 0 to 10000
-- date: random date from 1970 to now
+- string: 32bytes of ascii code string
+- long, integer, int: random integer 0 to 10000
+- double, float: random floating point 0 to 10000
+- timestamp, date: random time from 1970 to now
 
 More and more types will be appended...
 
