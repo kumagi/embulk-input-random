@@ -24,7 +24,7 @@ module Embulk
           Column.new(index, attr, :long)
         when "double", "float"
           Column.new(index, attr, :double)
-        when "date"
+        when "date", "timestamp"
           Column.new(index, attr, :timestamp)
         end
       }
@@ -58,7 +58,7 @@ module Embulk
                               n
                             when 'float', 'double'
                               Random.rand * 10000
-                            when 'date'
+                            when 'date', "timestamp"
                               Time.at(rand * Time.now.to_f)
                             else
                               raise "unknown type: #{type}"
